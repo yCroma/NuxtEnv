@@ -1,0 +1,16 @@
+version: '3.7'
+services: 
+  nuxt:
+    container_name: ${APP_NAME}
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    command: yarn dev
+    ports:
+      - ${APP_PORT}:3000
+    working_dir: /usr/src/app/${APP_NAME}
+    volumes:
+      - ./code:/usr/src/app/${APP_NAME}
+    environment: 
+      - HOST=0.0.0.0
+    #restart: always
