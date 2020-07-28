@@ -14,5 +14,5 @@ create:
 nuxt:
 	docker-compose exec nuxt ash
 
-yarn-dev:
+serve:
 	docker-compose exec nuxt yarn dev
